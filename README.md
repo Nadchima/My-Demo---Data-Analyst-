@@ -1,4 +1,4 @@
-# Data Analysis Report: Real Estate📊
+![image](https://github.com/user-attachments/assets/0eda34a3-52c8-4428-b65f-ff101787570d)# Data Analysis Report: Real Estate📊
 # 1. Objective
     The objective of this analysis is to summarize and interpret real estate listing data across various provinces in Thailand. The goal is to understand price trends, distribution of unit types, and geographic concentration, using visual insights from the provided dashboard.
 
@@ -32,20 +32,20 @@
   - Outer provinces offer more affordable units, which may appeal to budget-conscious buyers or long-term investors.
 
 # 5. Exploratory Data Analysis (EDA) in Google Colab
-  # 1. Import Libraries
+**1. Import Libraries**
     import pandas as pd
 
-  # 2. Load the Dataset
+**2. Load the Dataset**
     df = pd.read_excel('/content/mock_thailand_real_estate_complex_data_v3.xlsx')
     df.head()
     
-  # 3. Basic Info & Summary
+**3. Basic Info & Summary**
     df.info()                  
     df.describe()              
     df.isnull().sum()          
     df.duplicated().sum()    
     
-  # 4. Clean Data
+**4. Clean Data**
     print(df.duplicated().sum())
     df.drop(columns=['Property_ID'])
     df['Sale_Price_THB'] = df['Sale_Price_THB'].fillna(df['Sale_Price_THB'].mean())
@@ -71,20 +71,20 @@
     df.to_excel('property_data_cleaned.xlsx', index=False)
 
 # 6. Data Analysis Process in Power BI
-  # Data Import
+**Data Import:**
       Import data from Excel or other data sources into Power BI to start the analysis.
       
-  # Data Cleaning:
+**Data Cleaning:**
       Remove duplicates, handle missing values, and adjust data types appropriately using Power Query.
       
-  # Data Modeling:
+**Data Modeling:**
       Link tables and create Measures/Columns using DAX for analytical calculations.
    Example: 
     MEASURE 'Sheet1'[Average_Building_Age] = AVERAGE(Sheet1[Building_Age_Years])
     MEASURE 'Sheet1'[Average_Number_Of_Buildings] = AVERAGE(Sheet1[Number_of_Buildings])
     MEASURE 'Sheet1'[Yield_Rent] = DIVIDE(SUMX(Sheet1, Sheet1[Rental_Price_THB] * 12), SUM(Sheet1[Sale_Price_THB])) * 100
     
-  # Visualization:
+**Visualization:**
       Create interactive charts and dashboards such as Bar Charts, Pie Charts, and Slicers to display the results.
 
 ![image](https://github.com/user-attachments/assets/3b763999-bda7-493f-8349-9b3658cefb06)
