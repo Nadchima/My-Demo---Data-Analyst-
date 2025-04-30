@@ -33,19 +33,23 @@
 
 # 5. Exploratory Data Analysis (EDA) in Google Colab
 **1. Import Libraries**
+
     import pandas as pd
 
 **2. Load the Dataset**
+
     df = pd.read_excel('/content/mock_thailand_real_estate_complex_data_v3.xlsx')
     df.head()
     
 **3. Basic Info & Summary**
+
     df.info()                  
     df.describe()              
     df.isnull().sum()          
     df.duplicated().sum()    
     
 **4. Clean Data**
+
     print(df.duplicated().sum())
     df.drop(columns=['Property_ID'])
     df['Sale_Price_THB'] = df['Sale_Price_THB'].fillna(df['Sale_Price_THB'].mean())
@@ -60,17 +64,21 @@
     df['Address'] = df['Address'].fillna('Unknown')
     df = df[df['Sale_Price_THB'] < 10000000]      # Filter some outliers for sales price
 
-  # 5. Data Handle
+**5. Data Handle**
+  
     df['Price_per_sqm'] = df['Sale_Price_THB'] / df['Area_sqm']
     
-  # 6. Data Relationship
+**6. Data Relationship**
+  
     print(df.groupby('Area_sqm')['Sale_Price_THB'].mean())
     print(df['Property_Type'].value_counts())
     
-  # 7. Data Export
+**7. Data Export**
+  
     df.to_excel('property_data_cleaned.xlsx', index=False)
 
 # 6. Data Analysis Process in Power BI
+
 **Data Import:**
       Import data from Excel or other data sources into Power BI to start the analysis.
       
