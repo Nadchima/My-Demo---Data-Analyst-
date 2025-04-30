@@ -88,8 +88,11 @@
 **Data Modeling:**
       Link tables and create Measures/Columns using DAX for analytical calculations.
    Example: 
+   
     MEASURE 'Sheet1'[Average_Building_Age] = AVERAGE(Sheet1[Building_Age_Years])
+    
     MEASURE 'Sheet1'[Average_Number_Of_Buildings] = AVERAGE(Sheet1[Number_of_Buildings])
+    
     MEASURE 'Sheet1'[Yield_Rent] = DIVIDE(SUMX(Sheet1, Sheet1[Rental_Price_THB] * 12), SUM(Sheet1[Sale_Price_THB])) * 100
     
 **Visualization:**
