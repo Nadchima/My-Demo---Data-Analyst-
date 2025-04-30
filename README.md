@@ -88,7 +88,7 @@
 **Data Modeling:**
       Link tables and create Measures/Columns using DAX for analytical calculations.
       
-   Example: 
+**Example:** 
    
     MEASURE 'Sheet1'[Average_Building_Age] = AVERAGE(Sheet1[Building_Age_Years])
     
