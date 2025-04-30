@@ -11,19 +11,19 @@
     - Unit Size (Sq.m.)
 
 # 3. Key Visualizations & Findings
-**Unit Size vs Unit Price Scatter Plot**
+**Unit Size vs Unit Price Scatter Plot:**
    A general upward trend is observed—larger units tend to have higher total prices. However, there are notable outliers, indicating luxury units with higher price per square meter.
 
-**Combined Sales & Rental Value**
+**Combined Sales & Rental Value:**
     This shows the total monetary value of both property sales and rental listings. It helps compare the overall market size in terms of sales revenue versus potential rental income across different regions.
 
-**Top 3 Prices by Developer**
+**Top 3 Prices by Developer:**
     Displays the top three highest-priced units for each developer. This reveals which developers are focusing on premium or luxury projects within the market.
 
-**Total Number of Buildings by Property Type**
+**Total Number of Buildings by Property Type:**
     Indicates the number of buildings categorized by property type, such as condominium, single house, or townhouse. This helps identify development trends and market supply across different property categories.
 
-**Rental Yield (%) by Property Type**
+**Rental Yield (%) by Property Type:**
     Shows the rental yield percentage calculated for each property type. It highlights which property types offer the best return on investment from a rental perspective.
 
 # 4. Insights
