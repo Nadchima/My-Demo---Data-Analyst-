@@ -1,8 +1,8 @@
-📊Data Analysis Report: Real Estate
-1. Objective
+# Data Analysis Report: Real Estate📊
+# 1. Objective
     The objective of this analysis is to summarize and interpret real estate listing data across various provinces in Thailand. The goal is to understand price trends, distribution of unit types, and geographic concentration, using visual insights from the provided dashboard.
 
-2. Data Overview
+# 2. Data Overview
     The dataset includes residential unit listings with the following key fields:
     - Unit Name
     - Unit Type (1-Bedroom, 2-Bedroom)
@@ -10,24 +10,28 @@
     - Unit Price (in THB)
     - Unit Size (Sq.m.)
 
-3. Key Visualizations & Findings
+# 3. Key Visualizations & Findings
 **Unit Size vs Unit Price Scatter Plot**
    A general upward trend is observed—larger units tend to have higher total prices. However, there are notable outliers, indicating luxury units with higher price per square meter.
+
 **Combined Sales & Rental Value**
     This shows the total monetary value of both property sales and rental listings. It helps compare the overall market size in terms of sales revenue versus potential rental income across different regions.
+
 **Top 3 Prices by Developer**
     Displays the top three highest-priced units for each developer. This reveals which developers are focusing on premium or luxury projects within the market.
+
 **Total Number of Buildings by Property Type**
     Indicates the number of buildings categorized by property type, such as condominium, single house, or townhouse. This helps identify development trends and market supply across different property categories.
+
 **Rental Yield (%) by Property Type**
     Shows the rental yield percentage calculated for each property type. It highlights which property types offer the best return on investment from a rental perspective.
 
-4. Insights
+# 4. Insights
   - Smaller unit types (1-2 bedrooms) dominate the listings, suggesting a market focus on compact urban living.
   - Some units with relatively small sizes have high prices, indicating premium pricing based on location or brand rather than size alone.
   - Outer provinces offer more affordable units, which may appeal to budget-conscious buyers or long-term investors.
 
-5. Exploratory Data Analysis (EDA) in Google Colab
+# 5. Exploratory Data Analysis (EDA) in Google Colab
   # 1. Import Libraries
     import pandas as pd
 
@@ -66,17 +70,20 @@
   # 7. Data Export
     df.to_excel('property_data_cleaned.xlsx', index=False)
 
-6. Data Analysis Process in Power BI
+# 6. Data Analysis Process in Power BI
   # Data Import
       Import data from Excel or other data sources into Power BI to start the analysis.
+      
   # Data Cleaning:
       Remove duplicates, handle missing values, and adjust data types appropriately using Power Query.
+      
   # Data Modeling:
       Link tables and create Measures/Columns using DAX for analytical calculations.
    Example: 
     MEASURE 'Sheet1'[Average_Building_Age] = AVERAGE(Sheet1[Building_Age_Years])
     MEASURE 'Sheet1'[Average_Number_Of_Buildings] = AVERAGE(Sheet1[Number_of_Buildings])
     MEASURE 'Sheet1'[Yield_Rent] = DIVIDE(SUMX(Sheet1, Sheet1[Rental_Price_THB] * 12), SUM(Sheet1[Sale_Price_THB])) * 100
+    
   # Visualization:
       Create interactive charts and dashboards such as Bar Charts, Pie Charts, and Slicers to display the results.
 
