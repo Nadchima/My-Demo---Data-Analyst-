@@ -1,4 +1,4 @@
-# Data Analysis Report: Real Estate📊
+#📊 Data Analysis Report: Real Estate
 # 1. Objective
     The objective of this analysis is to summarize and interpret real estate listing data across various provinces in Thailand. The goal is to understand price trends, distribution of unit types, and geographic concentration, using visual insights from the provided dashboard.
 
